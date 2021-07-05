@@ -3,8 +3,6 @@ import Link from 'next/link'
 import useTheme from 'hooks/useTheme'
 
 const LINKS = [
-  { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
 ]
 
 type Props = {}
@@ -22,7 +20,7 @@ const Page: FunctionComponent<Props> = () => {
         </Link>
       ))}
       <button
-        className="px-2 py-1 ml-2 border rounded-md bg-bg focus:outline-none"
+        className="p-2 border rounded-md bg-bg focus:outline-none"
         onClick={toggleTheme}
       >
         {theme === 'dark' ? '🌙' : '☀️'}

@@ -5,6 +5,7 @@ import { Page } from 'components/Layout'
 import { NextSeo } from 'next-seo'
 import { SITE_DESCRIPTION, SITE_NAME } from 'config'
 import Head from 'next/head'
+import SimpleReactLightbox from 'simple-react-lightbox'
 
 const App: FunctionComponent<any> = ({ Component, pageProps }) => (
   <>
@@ -13,7 +14,9 @@ const App: FunctionComponent<any> = ({ Component, pageProps }) => (
     </Head>
     <Page>
       <NextSeo title={SITE_NAME} description={SITE_DESCRIPTION} />
+      <SimpleReactLightbox>
       <Component {...pageProps} />
+</SimpleReactLightbox>
     </Page>
   </>
 )

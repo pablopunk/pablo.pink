@@ -2,7 +2,7 @@ body {
   --color-bg: white;
   --color-bgDim: rgba(0, 0, 0, 0.07);
   --color-fg: #454545;
-  --color-accent: #0284c7;
+  --color-accent: fuchsia;
   --color-accent2: #14b8a6;
   --color-border: lightgray;
 
@@ -15,14 +15,15 @@ body {
 
   color: var(--color-fg);
   background-color: var(--color-bg);
+  font-size: 18px;
 }
 
 body.dark {
   --color-bg: black;
-  --color-bgDim: #100624;
+  --color-bgDim: #201d2b;
   --color-fg: #dedede;
-  --color-accent: cyan;
-  --color-accent2: lightpink;
+  --color-accent: hotpink;
+  --color-accent2: lightblue;
   --color-border: #343456;
 }
 
@@ -33,4 +34,8 @@ h4,
 h5,
 h6 {
   font-family: var(--font-serif);
+}
+
+strong, em {
+  color: var(--color-accent);
 }

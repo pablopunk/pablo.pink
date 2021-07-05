@@ -7,7 +7,7 @@ type Props = {}
 const Page: FunctionComponent<Props> = ({ children }) => (
   <>
     <Header />
-    <main className="max-w-[1300px] p-4 mx-auto">{children}</main>
+    <main className="max-w-[1000px] p-4 mx-auto">{children}</main>
     <Footer />
     <style jsx>{`
       main {
