@@ -36,6 +36,12 @@ h6 {
   font-family: var(--font-serif);
 }
 
-strong, em {
+strong,
+em {
   color: var(--color-accent);
+}
+
+.markdown__content a {
+  font-weight: bold;
+  text-decoration: underline;
 }

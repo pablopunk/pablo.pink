@@ -7,7 +7,7 @@ const snarkdownEnhanced = (md: string) => {
     .map((l) =>
       [' ', '\t', '#', '-', '*'].some((ch) => l.startsWith(ch))
         ? snarkdown(l)
-        : `<p>${snarkdown(l)}</p>`,
+        : `<p>${snarkdown(l)}</p>`
     )
 
   return htmls.join('\n\n')
@@ -17,6 +17,8 @@ const Markdown: FunctionComponent<HTMLAttributes<HTMLDivElement>> = ({
   children,
   ...rest
 }) => {
+  rest.className = `${rest.className || ''} markdown__content`
+
   if (typeof children !== 'string') {
     return <div {...rest}>Markdown children must be a string</div>
   }
