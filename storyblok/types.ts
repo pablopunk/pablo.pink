@@ -7,7 +7,7 @@ export type ButtonType = {
   link?: LinkType
 }
 export type ImageType = {
-  id: string
+  id: number
   filename: string
   title: string
 }

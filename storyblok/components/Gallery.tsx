@@ -17,17 +17,19 @@ type Props = {
 }
 
 export const Gallery: FunctionComponent<Props> = ({ blok }) => {
-  const images = blok.images?.map((image) => {
-    const width = parseInt(image.filename.split('/')[5].split('x')[0])
-    const height = parseInt(image.filename.split('/')[5].split('x')[1])
+  const images = blok.images
+    ?.sort((a, b) => b.id - a.id)
+    ?.map((image) => {
+      const width = parseInt(image.filename.split('/')[5].split('x')[0])
+      const height = parseInt(image.filename.split('/')[5].split('x')[1])
 
-    return {
-      src: image.filename,
-      alt: image.title,
-      width,
-      height,
-    }
-  })
+      return {
+        src: image.filename,
+        alt: image.title,
+        width,
+        height
+      }
+    })
 
   return (
     <Section>
